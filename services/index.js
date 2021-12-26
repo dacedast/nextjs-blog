@@ -39,6 +39,7 @@ export const getPosts = async () => {
   return result.postsConnection.edges;
 };
 
+
 export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
