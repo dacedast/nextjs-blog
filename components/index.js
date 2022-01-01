@@ -10,4 +10,6 @@ export { default as CommentsForm } from "./CommentsForm";
 export {default as FeaturedPostCard} from './FeaturedPostCard'
 export {default as Loader} from './Loader'
 export {default as Footer} from './Footer'
+export {default as Sidebar} from './Sidebar'
+export {default as Burger} from './Burger'
 
