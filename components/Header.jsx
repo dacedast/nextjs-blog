@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from "react";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
-
 import { getCategories } from "../services";
 import Burger from "./Burger";
 
