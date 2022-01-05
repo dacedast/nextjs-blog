@@ -2,12 +2,12 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className='container mx-auto p-10'>
+        <footer className='container mx-auto p-10 card'>
         <div className="flex flex-col justify-center text-center items-center">
-          <span className="font-bold text-4xl text-white py-5 border-t w-full inline-block px-10 custom-border" >
+          <span className="font-bold text-4xl text-white py-5 border-t w-full inline-block px-10 custom-border title" >
               Fated
             </span>
-            <div className="text-center text-white">Copyright © {new Date().getFullYear() + ` `} Made with love. All rights
+            <div className="text-center title">Copyright © {new Date().getFullYear() + ` `} Made with love. All rights
         reserved.</div>
         </div>
       </footer>

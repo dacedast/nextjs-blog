@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { submitComment } from "../services";
-import { toast } from "react-toastify";
 
-toast.configure();
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
   const [localStorage, setLocalStorage] = useState(null);

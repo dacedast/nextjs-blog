@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary: #fff;
-$secondary: #54c1fb;
-$white: #272848;
-$bg: #6c6d8a;
-$bgSecondary: #6c6d8a;
+$primary: #000;
+$secondary: #000;
+$white: #fff;
+$bg: #fff;
+$bgSecondary: #fff;
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 html,
@@ -83,10 +83,10 @@ a {
 
 }
 .card {
-  background-color: $primary;
+  background-color: $white;
 }
 .title2 {
-  color: $white;
+  color: $primary;
 }
 .title {
   color:  $primary;
