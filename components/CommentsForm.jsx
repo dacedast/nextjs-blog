@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { submitComment } from "../services";
+import { toast } from "react-toastify";
 
+toast.configure();
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false);
   const [localStorage, setLocalStorage] = useState(null);
@@ -87,21 +89,22 @@ const CommentsForm = ({ slug }) => {
         </div>
       </div>
       {error && (
-        <p className="text-xl text-red-500 font-semibold mt-6 float-right">All fields are required.</p>
+        <p className="text-l text-red-500 font-regular mt-6 text-center mb-4">All fields are required.</p>
       )}
+      {showSuccessMessage && (
+          <span className="text-xl text-center font-semibold mt-3 text-green-500">
+            Comment submitted for review
+          </span>
+        )}
       <div className="mt-8">
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3"
+          className="  inline-block bg-pink-600 text-lg rounded-full text-white px-8 py-3 secondary2"
         >
           Post Comment
         </button>
-        {showSuccessMessage && (
-          <span className="text-xl float-right font-semibold mt-3 text-green-500">
-            Comment submitted for review
-          </span>
-        )}
+        
       </div>
     </div>
   );

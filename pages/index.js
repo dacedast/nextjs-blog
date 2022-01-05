@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { PostCard, PostWidget, Categories } from "../components";
+import { PostCard, PostWidget, Categories, PostCards } from "../components";
 import { getPosts } from "../services";
 import {FeaturedPosts} from '../sections'
 
@@ -23,7 +23,7 @@ export default function Home({ posts }) {
         
         <div className="lg:col-span-8 col-span-1">
           {posts.map((post, index) => (
-            <PostCard post={post.node} key={index} />
+            <PostCards post={post.node} key={index} />
           )).reverse()}
         </div>
         <div className="lg:col-span-4 col-span-1">

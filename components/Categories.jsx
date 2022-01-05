@@ -7,7 +7,7 @@ const Categories = () => {
     getCategories().then((newCategories) => setCategories(newCategories));
   }, []);
   return (
-    <div className="widget shadow-lg rounded-lg p-8 mb-2 text-white">
+    <div className="widget shadow-lg rounded-lg p-8 mb-2 title">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4 ">Categories</h3>
       <div className="grid grid-cols-1 lg:grid-cols-2 ">
 
