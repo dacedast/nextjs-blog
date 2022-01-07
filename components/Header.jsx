@@ -24,7 +24,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen)
   return (
     <div className="container mx-auto px-10 mb-8 relative">
-      <div className="border-b w-full inline-block custom-border py-8">
+      <div className="border-b w-full inline-block border-black-500 py-8">
         <div className="md:float-left block">
         
           <Link href="/">

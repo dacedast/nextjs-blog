@@ -90,11 +90,11 @@ const CommentsForm = ({ slug }) => {
         <p className="text-l text-red-500 font-regular mt-6 text-center mb-4">All fields are required.</p>
       )}
       {showSuccessMessage && (
-          <span className="text-xl text-center font-semibold mt-3 text-green-500">
+          <p className="text-l text-center font-regular mt-6 text-green-500 text-center mb-4">
             Comment submitted for review
-          </span>
+          </p>
         )}
-      <div className="mt-8">
+      <div className="mt-8 text-center">
         <button
           type="button"
           onClick={handleCommentSubmission}
