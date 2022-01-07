@@ -1,23 +1,23 @@
 import Head from "next/head";
-import { PostCard, PostWidget, Categories, PostCards } from "../components";
+import { PostWidget, Categories, PostCards } from "../components";
 import { getPosts } from "../services";
 import {FeaturedPosts} from '../sections'
 
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
-      <h1 className="text-center text-3xl font-bold text-white mb-4">
-          Featured
+      <h1 className="text-center text-3xl font-extrabold title mb-4">
+          FEATURED
       </h1>
       <Head>
       <title>
-        Fated
+        FATED
       </title>
       <meta name="description" content="Blog of fated, but not yet billionaire"/>
     </Head>
       <FeaturedPosts />
-      <h1 className="text-center text-3xl font-bold text-white mb-4">
-          Chronicles
+      <h1 className="text-center text-3xl font-extrabold title mb-4">
+          CHRONICLES
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
