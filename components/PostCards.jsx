@@ -18,7 +18,7 @@ const PostCards = ({post}) => {
                     />            
             <div className=" flex flex-col w-full justify-between">
                 <h2 className="text-3xl font-bold mb-5 text-center md:text-left title2 p-4"><Link href={`/post/${post.slug}`}>{post.title}</Link></h2>
-                <p className='text-xl text-center md:text-left title2 mb-4 p-4'><Link href={`/post/${post.slug}`}>{post.excerpt}</Link></p>
+                <p className='text-xl text-center md:text-left title3 mb-4 p-4'><Link href={`/post/${post.slug}`}>{post.excerpt}</Link></p>
                 <footer className="md:flex text-center items-center justify-center w-3/3 py-3 px-2 text-xs text-gray-500 bg-gray-100 rounded-b-md">
                 <div className="flex items-center mb-3 justify-center md:mb-0 w-full md:w-auto mr-8">
                 <img

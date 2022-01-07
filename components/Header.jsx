@@ -26,7 +26,6 @@ const Header = () => {
     <div className="container mx-auto px-10 mb-8 relative">
       <div className="border-b w-full inline-block border-black-500 py-8">
         <div className="md:float-left block">
-        
           <Link href="/">
             <span className="cursor-pointer font-extrabold text-4xl title py-5 ">
               FATED
@@ -36,7 +35,6 @@ const Header = () => {
               <Burger isOpen={isOpen} toggle={toggle}/>
           </div>
         </div>
-        
         <div className="hidden md:float-left md:contents">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
@@ -45,9 +43,11 @@ const Header = () => {
               </span>
             </Link>
           ))}
-          </div>
+        </div>
+        
       </div>
         <Sidebar isOpen={isOpen} toggle={toggle}/>
+        
     </div>
   );
 };

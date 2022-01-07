@@ -87,6 +87,12 @@ a {
 .title2 {
   color: $secondary;
 }
+.title3 {
+  color: $secondary;
+  opacity: .7;
+
+}
+
 
 .title {
   color:  $primary;
@@ -96,6 +102,21 @@ a {
   transition: .3s ease-in;
   padding:8px;
   border-radius: 9px;
+}
+.links2 {
+  display: inline-block;
+}
+.links2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+.links2:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 
 .links:hover {

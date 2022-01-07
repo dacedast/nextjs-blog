@@ -12,4 +12,5 @@ export {default as Loader} from './Loader'
 export {default as Footer} from './Footer'
 export {default as Sidebar} from './Sidebar'
 export {default as Burger} from './Burger'
+export {default as SearchBox} from './SearchBox'
 
