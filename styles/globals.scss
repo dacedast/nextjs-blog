@@ -87,6 +87,7 @@ a {
 .title2 {
   color: $secondary;
 }
+
 .title {
   color:  $primary;
 }
@@ -94,19 +95,13 @@ a {
 .links {
   transition: .3s ease-in;
   padding:8px;
-  border-radius: 10px;
+  border-radius: 9px;
 }
-.links2 {
-  transition: .3s ease-in;
-  padding:8px;
-  border-radius: 10px;
+
+.links:hover {
+  background-color: #f0f0f0;
 }
-// .links:hover {
-//   background-color: #5c5470;
-// }
-// .links2:hover {
-//   background-color: #9E96B0;
-// }
+
 
 
 
