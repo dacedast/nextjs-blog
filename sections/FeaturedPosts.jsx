@@ -1,65 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
-import { FeaturedPostCard } from '../components';
-import { getFeaturedPosts } from '../services';
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 768, min: 640 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
-  },
-};
-
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FeaturedPostCard } from "../components";
+import { getFeaturedPosts } from "../services";
+import "swiper/css";
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
-
+  const [windowWidth, setWindowWidth] = useState();
+  const [slides, setSlides] = useState(3);
   useEffect(() => {
     getFeaturedPosts().then((result) => {
       setFeaturedPosts(result);
       setDataLoaded(true);
     });
   }, []);
-
-  const customLeftArrow = (
-    <div className="absolute arrow-btn left-0 py-3 cursor-pointer bg-black rounded-full flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-      </svg>
-    </div>
-  );
-
-  const customRightArrow = (
-    <div className="absolute arrow-btn right-0 py-3 cursor-pointer bg-black rounded-full flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-      </svg>
-    </div>
-  );
+  const detectSize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", detectSize);
+    return () => {
+      window.removeEventListener("resize", detectSize);
+    };
+  }, [windowWidth]);
+  useEffect(() => {
+    if (windowWidth <= 640) {
+      setSlides(1);
+    } else if (windowWidth <= 768 && windowWidth > 640) {
+      setSlides(2);
+    } else if (windowWidth <= 1024 && windowWidth > 768) {
+      setSlides(3);
+    }
+  }, [windowWidth]);
 
   return (
-    <div className="mb-8 border-b border-black-500">
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
-        {dataLoaded && featuredPosts.map((post, index) => (
-          <FeaturedPostCard key={index} post={post} />
-        ))}
-      </Carousel>
-    </div>
+    <>
+      {/* <div className="mb-8 border-b border-black-500"> */}
+      <Swiper spaceBetween={20} slidesPerView={slides} className="flex w-full">
+        {dataLoaded &&
+          featuredPosts.map((post, index) => (
+            <SwiperSlide key={index}>
+              <FeaturedPostCard post={post} />
+            </SwiperSlide>
+          ))}
+      </Swiper>
+    </>
   );
+  {
+    /* </div> */
+  }
 };
 
 export default FeaturedPosts;

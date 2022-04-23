@@ -13,8 +13,10 @@ const Author = ({ author }) => {
           className="align-middle rounded-full"
         />
       </div>
-      <h3 className="text-black my-4 text-xl font-bold ">{author.name}</h3>
-      <p className="text-black text-lg ">{author.bio}</p>
+      <h3 className="text-black my-4 text-xl font-bold font-display ">
+        {author.name}
+      </h3>
+      <p className="text-black text-lg font-body">{author.bio}</p>
     </div>
   );
 };

@@ -7,19 +7,17 @@ $secondary: #000;
 $white: #fff;
 $bg: #fff;
 $bgSecondary: #fff;
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Oswald', sans-serif;
   &:before {
     content: "";
     width: 100%;
     height: 100vh;
-    background-color:$bg;
+    background-color: #f9f9f9;
     position: fixed;
     left: 0;
     top: 0;
@@ -30,21 +28,20 @@ body {
   }
 }
 
-
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 5px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,.25);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #5c5470;
-  transition: .2s all;
+  transition: 0.2s all;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #877F9F;
+  background-color: #877f9f;
 }
 
 .text-shadow {
@@ -73,13 +70,11 @@ a {
 }
 
 .widget {
-   background-color: $white;
+  background-color: $white;
 }
 
-
 .secondary2 {
-    background-color: $secondary;
-
+  background-color: $secondary;
 }
 .card {
   background-color: $white;
@@ -89,18 +84,16 @@ a {
 }
 .title3 {
   color: $secondary;
-  opacity: .7;
-
+  opacity: 0.7;
 }
 
-
 .title {
-  color:  $primary;
+  color: $primary;
 }
 
 .links {
-  transition: .3s ease-in;
-  padding:8px;
+  transition: 0.3s ease-in;
+  padding: 8px;
   border-radius: 9px;
 }
 .links2 {
@@ -123,18 +116,15 @@ a {
   background-color: #f0f0f0;
 }
 
-
-
-
 .sidebar {
   background-color: $primary;
   font-size: 1.3rem;
   color: #fff;
   font-weight: 400;
-  animation: slideIn .3s ease-in-out;
+  animation: slideIn 0.3s ease-in-out;
   overflow: hidden;
   z-index: 1;
-  position:  absolute;
+  position: absolute;
   left: 40px;
   right: 40px;
   text-align: center;
@@ -145,7 +135,7 @@ a {
     transform: translateY(-20px);
     opacity: 0;
   }
-  
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -160,12 +150,13 @@ a {
   justify-content: space-around;
   flex-flow: column nowrap;
 }
-.burger1, .burger2, .burger3{
+.burger1,
+.burger2,
+.burger3 {
   width: 2rem;
-  height: .25rem;
+  height: 0.25rem;
   background-color: #000;
   border-radius: 5px;
   transform-origin: 1px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
-
