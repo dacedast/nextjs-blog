@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
-        <title>FATED</title>
+        <title>Ryota</title>
         <meta
           name="description"
           content="Blog of fated, but not yet billionaire"
